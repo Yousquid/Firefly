@@ -1,0 +1,202 @@
+{
+    "status": "passed",
+    "passed": true,
+    "captureReady": true,
+    "startedUtc": "2026-10-03T17:39:50.1706304Z",
+    "elapsedSeconds": 45.39613480000001,
+    "unityVersion": "6000.0.66f2",
+    "scene": "Assets/Firefly/Scenes/NightMeadow.unity",
+    "initializedAudioClips": 3,
+    "nearbyPointLightsWhenLit": 3,
+    "nearbyPointLightsWhenDark": 3,
+    "playerPointIntensityWhenLit": 0.30000001192092898,
+    "playerPointIntensityWhenDark": 0.0,
+    "respondingPointLights": 13,
+    "collectiveLightEnergy": 22.359844207763673,
+    "ambientLightEnergy": 0.6185844540596008,
+    "playerViewportHeight": 0.01886764168739319,
+    "darkFrameMeanLuminance": 0.00005644575139740482,
+    "collectiveFrameMeanLuminance": 0.001340454793535173,
+    "lightScreenshot": "C:\\Users\\30791\\Documents\\GitHub\\Firefly\\Artifacts\\NightMeadow.png",
+    "darkScreenshot": "C:\\Users\\30791\\Documents\\GitHub\\Firefly\\Artifacts\\NightMeadowDark.png",
+    "collectiveScreenshot": "C:\\Users\\30791\\Documents\\GitHub\\Firefly\\Artifacts\\NightMeadowCollective.png",
+    "screenshotMethod": "Main game camera, URP SingleCameraRequest, HDR 1920x1080",
+    "checks": [
+        {
+            "name": "Runtime scene components",
+            "passed": true,
+            "detail": "FlightInput, FireflyPilot, FireflyGlow and MeadowCamera must exist."
+        },
+        {
+            "name": "Soundscape clips initialized",
+            "passed": true,
+            "detail": "Initialized 3 clips: Wing flutter, Procedural meadow evening, Soft answer."
+        },
+        {
+            "name": "Ambient fireflies have real lights",
+            "passed": true,
+            "detail": "Nearby insect billboards must be backed by several enabled Unity point lights."
+        },
+        {
+            "name": "Gamepad deadzone",
+            "passed": true,
+            "detail": "A small physical stick offset must neither produce movement input nor drift."
+        },
+        {
+            "name": "Analog movement",
+            "passed": true,
+            "detail": "Half stick must produce analog gamepad movement."
+        },
+        {
+            "name": "Forward flight",
+            "passed": true,
+            "detail": "Up on the stick must fly forward relative to the camera."
+        },
+        {
+            "name": "Diagonal speed limit",
+            "passed": true,
+            "detail": "Full diagonal speed 2.291 versus cardinal 2.292."
+        },
+        {
+            "name": "RT ascends",
+            "passed": true,
+            "detail": "Right trigger alone must fly upward without horizontal drift."
+        },
+        {
+            "name": "LT descends",
+            "passed": true,
+            "detail": "Left trigger alone must fly downward."
+        },
+        {
+            "name": "Opposite triggers cancel",
+            "passed": true,
+            "detail": "Simultaneous fully held triggers must produce zero vertical intent."
+        },
+        {
+            "name": "Keyboard vertical fallback",
+            "passed": true,
+            "detail": "Synthetic Keyboard Space and Left Ctrl must raise and lower the same flight controller."
+        },
+        {
+            "name": "Three dimensional speed limit",
+            "passed": true,
+            "detail": "Combined horizontal diagonal and ascent speed 2.291 versus cardinal 2.292; the full xyz vector must be normalized."
+        },
+        {
+            "name": "Altitude boundaries",
+            "passed": true,
+            "detail": "Sustained vertical input must respect altitude bounds (0.50, 9.00)."
+        },
+        {
+            "name": "Upward surface collision",
+            "passed": true,
+            "detail": "Ascending must stop below a ceiling, including the player's sphere radius."
+        },
+        {
+            "name": "Downward surface collision",
+            "passed": true,
+            "detail": "Descending must stop above a floor; upward normals cannot be ignored in three dimensional flight."
+        },
+        {
+            "name": "Four flight directions",
+            "passed": true,
+            "detail": "Right, left and backward stick input must move on the camera's ground plane."
+        },
+        {
+            "name": "Camera follows player",
+            "passed": true,
+            "detail": "The camera must follow horizontal movement while preserving its view offset."
+        },
+        {
+            "name": "Camera obstruction",
+            "passed": true,
+            "detail": "A temporary obstacle between the target and camera must shorten the view distance."
+        },
+        {
+            "name": "Right stick camera orbit",
+            "passed": true,
+            "detail": "Right stick must change camera yaw and pitch while an idle player remains still."
+        },
+        {
+            "name": "Flight follows orbit orientation",
+            "passed": true,
+            "detail": "Forward flight must follow the camera's new horizontal heading after orbiting."
+        },
+        {
+            "name": "Distant camera and tiny player",
+            "passed": true,
+            "detail": "Player body projected height is 1.89% of the viewport; unobstructed camera distance is 18.00."
+        },
+        {
+            "name": "A press toggles once",
+            "passed": true,
+            "detail": "Holding South/A must emit one glow press and keep the new light state."
+        },
+        {
+            "name": "A release and second press",
+            "passed": true,
+            "detail": "A fresh press after release must toggle the glow again."
+        },
+        {
+            "name": "Player glow is a small local light",
+            "passed": true,
+            "detail": "Player-only point intensity 0.300 lit, 0.000 dark; range 1.65. Other insects' independently flashing lights are excluded from this check."
+        },
+        {
+            "name": "Start pauses flight",
+            "passed": true,
+            "detail": "Start must freeze three dimensional flight and camera orbit despite held stick/trigger input."
+        },
+        {
+            "name": "Start resumes flight",
+            "passed": true,
+            "detail": "A second Start press must restore time and movement."
+        },
+        {
+            "name": "RB gentle boost",
+            "passed": true,
+            "detail": "Right shoulder with stick input must increase flight speed."
+        },
+        {
+            "name": "Gamepad disconnection",
+            "passed": true,
+            "detail": "Removing the active gamepad must clear horizontal/vertical/orbit/boost input and stop flight."
+        },
+        {
+            "name": "Meadow flight boundaries",
+            "passed": true,
+            "detail": "Continued outward flight must remain within x [-17, 17] and z [-12, 15]."
+        },
+        {
+            "name": "Focus loss pauses safely",
+            "passed": true,
+            "detail": "A simulated application focus loss must pause and clear flight input."
+        },
+        {
+            "name": "Dark clearing baseline",
+            "passed": true,
+            "detail": "The comparison frame must precede the first collective response, with the player glow switched off."
+        },
+        {
+            "name": "Clearing answers the player",
+            "passed": true,
+            "detail": "Lighting the abdomen at the first clearing must trigger one new discovered group and its response event."
+        },
+        {
+            "name": "Collective response lights the environment",
+            "passed": true,
+            "detail": "Responding real point lights 13, response intensity sum 22.360, ambient intensity sum 0.619. The group must provide actual Unity lighting beyond billboard emission."
+        },
+        {
+            "name": "Light reaches visible brightness",
+            "passed": true,
+            "detail": "The smooth glow transition must settle into its visible state."
+        },
+        {
+            "name": "Collective frame brightens the meadow",
+            "passed": true,
+            "detail": "Same camera framing: dark PNG mean luminance 0.00006, collective response 0.00134."
+        }
+    ],
+    "errors": []
+}
